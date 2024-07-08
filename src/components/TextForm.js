@@ -51,11 +51,24 @@ export default function TextForm(props) {
             <div className="mb-3">
                 <textarea className="form-control" id="textbox" rows="8" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode === 'light'?'white':'grey',color:props.mode === 'dark'?'white':'#042743'}}></textarea>
             </div>
-            <button className="btn btn-primary mx-3" onClick={handleUpClick}>Convert to UpperCase</button>
-            <button className="btn btn-primary mx-3" onClick={handleloClick}>Convert to LowerCase</button>
-            <button className="btn btn-primary mx-3" onClick={handleExtarSpaceClick}>Remove Extra Space</button>
-            <button className="btn btn-primary mx-3" onClick={handlecopyClick}>CopyText</button>
-            <button className="btn btn-primary mx-3" onClick={handleclearClick}>Clear Text</button>
+            <div className="row">
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2">
+            <button className="btn btn-primary w-100 mb-2" onClick={handleUpClick}>Convert to UpperCase</button>
+        </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2">
+            <button className="btn btn-primary w-100 mb-2" onClick={handleloClick}>Convert to LowerCase</button>
+        </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2">
+            <button className="btn btn-primary w-100 mb-2" onClick={handleExtarSpaceClick}>Remove Extra Space</button>
+        </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2">
+            <button className="btn btn-primary w-100 mb-2" onClick={handlecopyClick}>Copy Text</button>
+        </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2">
+            <button className="btn btn-primary w-100 mb-2" onClick={handleclearClick}>Clear Text</button>
+        </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2"></div>
+    </div>
 
     </div>
     <div className="container my-3 " style={{color:props.mode === 'dark'?'white':'#042743'}}>
